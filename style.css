@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+	--major-grid-color: #000;
+	--major-grid-weight: 1;
+}
+
+body {
+	margin: 0;
+	background-color: #333;
+}
+
+h1 {
+	color: #fff;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 22px;
+	padding: 0;
+	margin: 0;
+	margin-bottom: 20px;
+}
+
+.printers {
+	padding: 15px;
+	border-radius: 5px;
+	background-color: #222;
+}
+
+.printers button {
+	display: inline;
+	background-color: #333;
+	border: none;
+	outline: none;
+	color: #fff;
+	padding: 5px 10px;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+.printers button:hover {
+	background-color: #444;
+}
+
+.container {
+	padding: 20px 10px;
+	width: 100%;
+	max-width: 1140px;
+	margin: 0 auto;
+}
+
+.expandable {
+  cursor: pointer;
+}
+
+.expandable.active {
+  display: block;
+}
+
+.expandable:not(.active) + ol {
+  display: none;
+}
+
+.expandable.active + ol li {
+  display: block;
+}
+
+.expandable span {
+	position: relative;
+}
+
+.expandable span::after {
+	content: " \22BB;";
+}
+
+.expandable.active span::after {
+	content: " \22BC;";
+}
+
+.menus {
+	font-family: 'IBM Plex Mono', monospace;
+	color: #fff;
+	background-color: #4871F4;
+	font-size: 18px;
+	border-radius: 5px;
+}
+
+ol span {
+	display: block;
+	position: relative;
+}
+
+ol span::before {
+	content: "";
+	position: absolute;
+	top: 10px;
+	left: -28px;
+	width: 20px;
+	height: 1px;
+	background-color: #fff;
+}
+
+ol {
+	padding-inline-start: 20px;
+	position: relative;
+	list-style: none;
+}
+
+ol:first-child {
+	padding: 20px 20px 20px 50px;
+}
+
+ol:first-child::before {
+	display: none;
+}
+
+ol::before {
+	content: "";
+	position: absolute;
+	top: -13px;
+	left: -8px;
+	width: 1px;
+	height: calc(100%);
+	background-color: #fff;
+}
